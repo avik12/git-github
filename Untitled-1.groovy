@@ -28,6 +28,12 @@ pipeline{
                     stage ('Four'){
                                 parallel {
                                     stage ('Unit Test') {
+                                        agent {
+                                            docker {
+                                                reuseNode false
+                                                image 'ubuntu'
+                                            }
+                                        }
                                        steps{ echo 'Unit Test'
                                        }
                                     }
