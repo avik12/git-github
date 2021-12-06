@@ -25,6 +25,20 @@ pipeline{
                                 }
 
                     }
+                    stage ('Four'){
+                                parallel {
+                                    stage ('Unit Test') {
+                                        echo 'Unit Test'
+
+                                    }
+                                    stage ('Integration Test'){
+                                        echo 'Integration Test'    
+                                    }
+                                }
+
+
+
+                    }
 
 
     }
