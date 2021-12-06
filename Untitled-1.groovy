@@ -28,11 +28,12 @@ pipeline{
                     stage ('Four'){
                                 parallel {
                                     stage ('Unit Test') {
-                                        echo 'Unit Test'
-
+                                       steps{ echo 'Unit Test'
+                                       }
                                     }
                                     stage ('Integration Test'){
-                                        echo 'Integration Test'    
+                                        steps{echo 'Integration Test'    
+                                        }
                                     }
                                 }
 
